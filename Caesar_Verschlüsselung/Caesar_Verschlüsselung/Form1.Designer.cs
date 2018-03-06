@@ -35,12 +35,13 @@
             this.btn_entschlüsseln = new System.Windows.Forms.Button();
             this.txt_entschlüsseln_ausgabe = new System.Windows.Forms.TextBox();
             this.txt_schlüssel = new System.Windows.Forms.TextBox();
-            this.Schlüssel = new System.Windows.Forms.Label();
+            this.btn_end = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txteingabe
             // 
-            this.txteingabe.Location = new System.Drawing.Point(12, 35);
+            this.txteingabe.Location = new System.Drawing.Point(12, 54);
             this.txteingabe.Name = "txteingabe";
             this.txteingabe.Size = new System.Drawing.Size(685, 20);
             this.txteingabe.TabIndex = 0;
@@ -48,7 +49,7 @@
             // 
             // btn_verschlüsseln
             // 
-            this.btn_verschlüsseln.Location = new System.Drawing.Point(12, 61);
+            this.btn_verschlüsseln.Location = new System.Drawing.Point(12, 80);
             this.btn_verschlüsseln.Name = "btn_verschlüsseln";
             this.btn_verschlüsseln.Size = new System.Drawing.Size(685, 53);
             this.btn_verschlüsseln.TabIndex = 1;
@@ -58,9 +59,9 @@
             // 
             // txtausgabe
             // 
-            this.txtausgabe.Enabled = false;
-            this.txtausgabe.Location = new System.Drawing.Point(12, 120);
+            this.txtausgabe.Location = new System.Drawing.Point(12, 139);
             this.txtausgabe.Name = "txtausgabe";
+            this.txtausgabe.ReadOnly = true;
             this.txtausgabe.Size = new System.Drawing.Size(685, 20);
             this.txtausgabe.TabIndex = 2;
             this.txtausgabe.TextChanged += new System.EventHandler(this.txtausgabe_TextChanged);
@@ -85,36 +86,50 @@
             // 
             // txt_entschlüsseln_ausgabe
             // 
-            this.txt_entschlüsseln_ausgabe.Enabled = false;
             this.txt_entschlüsseln_ausgabe.Location = new System.Drawing.Point(12, 346);
             this.txt_entschlüsseln_ausgabe.Name = "txt_entschlüsseln_ausgabe";
+            this.txt_entschlüsseln_ausgabe.ReadOnly = true;
             this.txt_entschlüsseln_ausgabe.Size = new System.Drawing.Size(685, 20);
             this.txt_entschlüsseln_ausgabe.TabIndex = 5;
             this.txt_entschlüsseln_ausgabe.TextChanged += new System.EventHandler(this.txt_entschlüsseln_ausgabe_TextChanged);
             // 
             // txt_schlüssel
             // 
-            this.txt_schlüssel.Location = new System.Drawing.Point(295, 180);
+            this.txt_schlüssel.Location = new System.Drawing.Point(303, 194);
             this.txt_schlüssel.Name = "txt_schlüssel";
-            this.txt_schlüssel.Size = new System.Drawing.Size(100, 20);
+            this.txt_schlüssel.Size = new System.Drawing.Size(117, 20);
             this.txt_schlüssel.TabIndex = 6;
+            this.txt_schlüssel.Text = "Schlüssel";
+            this.txt_schlüssel.Click += new System.EventHandler(this.txt_schlüssel_Click);
             this.txt_schlüssel.TextChanged += new System.EventHandler(this.txt_schlüssel_TextChanged);
             // 
-            // Schlüssel
+            // btn_end
             // 
-            this.Schlüssel.AutoSize = true;
-            this.Schlüssel.Location = new System.Drawing.Point(320, 164);
-            this.Schlüssel.Name = "Schlüssel";
-            this.Schlüssel.Size = new System.Drawing.Size(52, 13);
-            this.Schlüssel.TabIndex = 7;
-            this.Schlüssel.Text = "Schlüssel";
+            this.btn_end.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btn_end.Location = new System.Drawing.Point(668, 5);
+            this.btn_end.Name = "btn_end";
+            this.btn_end.Size = new System.Drawing.Size(29, 24);
+            this.btn_end.TabIndex = 7;
+            this.btn_end.Text = "X";
+            this.btn_end.UseVisualStyleBackColor = false;
+            this.btn_end.Click += new System.EventHandler(this.btn_end_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(300, 11);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(120, 13);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Caesar Verschlüsselung";
             // 
             // form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(709, 412);
-            this.Controls.Add(this.Schlüssel);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btn_end);
             this.Controls.Add(this.txt_schlüssel);
             this.Controls.Add(this.txt_entschlüsseln_ausgabe);
             this.Controls.Add(this.btn_entschlüsseln);
@@ -138,7 +153,8 @@
         private System.Windows.Forms.Button btn_entschlüsseln;
         private System.Windows.Forms.TextBox txt_entschlüsseln_ausgabe;
         private System.Windows.Forms.TextBox txt_schlüssel;
-        private System.Windows.Forms.Label Schlüssel;
+        private System.Windows.Forms.Button btn_end;
+        private System.Windows.Forms.Label label1;
     }
 }
 
